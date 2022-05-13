@@ -1,0 +1,33 @@
+.slider__slides {
+  display : flex;
+  width : 554px;
+  height :  554px;
+  overflow : hidden;
+}
+
+
+.slider__slide {
+  transition: all 1.3s;
+  transform: scaleX(0);
+  width : 0;
+}
+
+#slide1:checked ~ .slider__slides .slider__slide--1 {
+  transform: scaleX(1);
+  width : 100%;
+}
+
+#slide2:checked ~ .slider__slides .slider__slide--2 {
+  transform: scaleX(1);
+  width : 100%;
+}
+
+#slide3:checked ~ .slider__slides .slider__slide--3 {
+  transform: scaleX(1);
+  width : 100%;
+}
+
+#slide4:checked ~ .slider__slides .slider__slide--4 {
+  transform: scaleX(1);
+  width : 100%;
+}
