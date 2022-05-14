@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   font-family             : 'Roboto Mono', monospace;
   font-size               : 1em;
@@ -17,42 +21,69 @@ html, body {
 
 }
 
+
 [type='radio'] {
   display : none;
 }
 
 .slider__slides {
-  display  : flex;
-
-
-  overflow : hidden;
+  overflow            : hidden;
+  background-color    : #ddd;
+  box-shadow          : 0 0 1.5rem rgba(0, 0, 0, .5);
+  padding             : 0.5rem;
+  display             : grid;
+  grid-template-areas : "a";
+  align-items         : center;
+  justify-content     : center;
 }
 
 
 .slider__slide {
-  transition : all .6s;
-  transform  : scaleX(0);
-  width      : 0;
+  transition       : transform .6s, opacity .6s;
+  transform        : scaleX(0);
+  opacity          : 0;
+  width            : 0;
+  grid-area        : a;
+  transform-origin : left;
+  display          : flex;
+  align-items      : center;
+  justify-content  : center;
+  z-index : 0;
+
+}
+
+.slider__slide img {
+  display : block;
+
+
 }
 
 #slide1:checked ~ .slider__slides .slider__slide--1 {
   transform : scaleX(1);
   width     : 100%;
+  opacity   : 1;
+  z-index : 1;
 }
 
 #slide2:checked ~ .slider__slides .slider__slide--2 {
   transform : scaleX(1);
   width     : 100%;
+  opacity   : 1;
+  z-index : 1;
 }
 
 #slide3:checked ~ .slider__slides .slider__slide--3 {
   transform : scaleX(1);
   width     : 100%;
+  opacity   : 1;
+  z-index : 1;
 }
 
 #slide4:checked ~ .slider__slides .slider__slide--4 {
   transform : scaleX(1);
   width     : 100%;
+  opacity   : 1;
+  z-index : 1;
 }
 
 .slider__texts {
@@ -125,3 +156,22 @@ html, body {
 }
 
 
+.app {
+  display : grid;
+  width   : 100vw;
+  height  : 100vh;
+  padding : 2rem;
+}
+
+.slider {
+  align-self   : center;
+  justify-self : center;
+  display      : grid;
+  width: 44rem;
+}
+
+@media screen and (max-width: 768px) {
+  .slider {
+    width: 100%;
+  }
+}
