@@ -155,9 +155,37 @@ html, body {
   transition          : background-size 0.3s;
 }
 
+
+#slide1:checked ~ .slider__controls .slider__control--1 {
+  background-image    : radial-gradient(#fff 30%, #30bbd1 70%);
+
+}
+
+#slide2:checked ~ .slider__controls .slider__control--2 {
+  background-image    : radial-gradient(#fff 30%, #30bbd1 70%);
+}
+
+#slide3:checked ~ .slider__controls .slider__control--3 {
+  background-image    : radial-gradient(#fff 30%, #30bbd1 70%);
+}
+
+#slide4:checked ~ .slider__controls .slider__control--4 {
+  background-image    : radial-gradient(#fff 30%, #30bbd1 70%);
+}
+
+
+.slider__controls .slider__control:active {
+  background-image    : radial-gradient(#8a2be2 30%, #30bbd1 70%);
+}
+
+
+
+
 .slider__control:hover {
   background-size : 3rem 3rem;
 }
+
+
 
 
 .app {
