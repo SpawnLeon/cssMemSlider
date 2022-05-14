@@ -1,5 +1,5 @@
 * {
-  box-sizing: border-box;
+  box-sizing : border-box;
 }
 
 html, body {
@@ -30,11 +30,9 @@ html, body {
   overflow            : hidden;
   background-color    : #ddd;
   box-shadow          : 0 0 1.5rem rgba(0, 0, 0, .5);
-  padding             : 0.5rem;
   display             : grid;
+  grid-area           : top;
   grid-template-areas : "a";
-  align-items         : center;
-  justify-content     : center;
 }
 
 
@@ -44,56 +42,60 @@ html, body {
   opacity          : 0;
   width            : 0;
   grid-area        : a;
-  transform-origin : left;
   display          : flex;
   align-items      : center;
   justify-content  : center;
-  z-index : 0;
+  z-index          : 0;
+  height: 100%;
+
 
 }
 
 .slider__slide img {
   display : block;
-
-
+  width   : 100%;
 }
 
 #slide1:checked ~ .slider__slides .slider__slide--1 {
   transform : scaleX(1);
   width     : 100%;
   opacity   : 1;
-  z-index : 1;
+  z-index   : 1;
+
 }
 
 #slide2:checked ~ .slider__slides .slider__slide--2 {
   transform : scaleX(1);
   width     : 100%;
   opacity   : 1;
-  z-index : 1;
+  z-index   : 1;
 }
 
 #slide3:checked ~ .slider__slides .slider__slide--3 {
   transform : scaleX(1);
   width     : 100%;
   opacity   : 1;
-  z-index : 1;
+  z-index   : 1;
 }
 
 #slide4:checked ~ .slider__slides .slider__slide--4 {
   transform : scaleX(1);
   width     : 100%;
   opacity   : 1;
-  z-index : 1;
+  z-index   : 1;
 }
 
 .slider__texts {
-  display             : grid;
-  grid-template-areas : "a";
+  display   : grid;
+  grid-area : left;
+  grid-template-areas: "a";
+  align-items : center;
 }
 
 .slider__text {
   opacity    : 0;
   transition : all .6s;
+  margin     : 0;
 }
 
 .slider__text--1 {
@@ -129,8 +131,10 @@ html, body {
 }
 
 .slider__controls {
-  display : flex;
-  gap     : 0.1rem;
+  display         : flex;
+  gap             : 0.1rem;
+  grid-area       : right;
+  justify-content : flex-end;
 }
 
 .slider__control {
@@ -164,14 +168,37 @@ html, body {
 }
 
 .slider {
-  align-self   : center;
-  justify-self : center;
-  display      : grid;
-  width: 44rem;
+  align-self          : center;
+  justify-self        : center;
+  display             : grid;
+  width               : 44rem;
+  gap                 : 2rem;
+  grid-template-areas :
+            "top top"
+            "left right";
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width : 768px) {
+  .app {
+    padding: 0.5rem;
+  }
+
   .slider {
-    width: 100%;
+    width : 100%;
+  }
+
+  .slider {
+    grid-template-areas :
+            "top"
+            "right"
+            "left";
+  }
+
+  .slider__controls {
+    justify-content : center;
+  }
+
+  .slider__texts {
+    justify-content : flex-start;
   }
 }
