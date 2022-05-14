@@ -6,6 +6,13 @@
         content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible"
         content="ie=edge">
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
   <link rel="stylesheet"
         href="./normalize.css">
   <link rel="stylesheet"
@@ -15,10 +22,19 @@
 <body>
 <div class="container">
   <div class="slider">
-    <input type="radio" name="point" id="slide1" checked>
-    <input type="radio" name="point" id="slide2">
-    <input type="radio" name="point" id="slide3">
-    <input type="radio" name="point" id="slide4">
+    <input type="radio"
+           name="point"
+           id="slide1"
+           checked>
+    <input type="radio"
+           name="point"
+           id="slide2">
+    <input type="radio"
+           name="point"
+           id="slide3">
+    <input type="radio"
+           name="point"
+           id="slide4">
 
     <div class="slider__slides">
       <div class="slider__slide slider__slide--1">
@@ -28,6 +44,7 @@
       <div class="slider__slide slider__slide--2">
         <img src="./assets/images/slide-2.jpg"
              alt="">
+
       </div>
       <div class="slider__slide slider__slide--3">
         <img src="./assets/images/slide-3.jpg"
@@ -38,7 +55,27 @@
              alt="">
       </div>
     </div>
+
+    <div class="slider__texts">
+      <p class="slider__text slider__text--1">ewwewer 111e</p>
+      <p class="slider__text slider__text--2">ewwewer ewerw weter ert erwe we</p>
+      <p class="slider__text slider__text--3">ewwreter hj6yt5rwe we</p>
+      <p class="slider__text slider__text--4">ewwewer weretet 4 twe we</p>
+    </div>
+
+    <div class="slider__controls">
+      <label for="slide1"
+             class="slider__control slider__control--1">1</label>
+      <label for="slide2"
+             class="slider__control slider__control--2">2</label>
+      <label for="slide3"
+             class="slider__control slider__control--3">3</label>
+      <label for="slide4"
+             class="slider__control slider__control--4">4</label>
+    </div>
   </div>
+
+</div>
 </div>
 </body>
 </html>
