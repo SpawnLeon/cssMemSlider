@@ -96,6 +96,7 @@ html, body {
   opacity    : 0;
   transition : all .6s;
   margin     : 0;
+  line-height : 1;
 }
 
 .slider__text--1 {
@@ -199,8 +200,7 @@ html, body {
   align-self          : center;
   justify-self        : center;
   display             : grid;
-  width               : 44rem;
-  gap                 : 2rem;
+  gap                 : 1rem;
   grid-template-areas :
             "top top"
             "left right";
@@ -220,6 +220,7 @@ html, body {
             "top"
             "right"
             "left";
+    width : auto;
   }
 
   .slider__controls {
@@ -228,5 +229,22 @@ html, body {
 
   .slider__texts {
     justify-content : flex-start;
+  }
+}
+
+@media screen and (max-height : 1000px) {
+  .slider {
+    gap: 0.7rem;
+  }
+  .slider__slides {
+    max-height: 70vh;
+  }
+
+  .slider__slide img {
+    max-width: 57vh;
+  }
+
+  .app {
+    padding: 0.5rem;
   }
 }
