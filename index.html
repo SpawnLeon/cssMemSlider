@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible"
+        content="ie=edge">
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet"
+        href="./normalize.css">
+  <link rel="stylesheet"
+        href="./style.css">
+  <title>CSS Mem Slider</title>
+</head>
+<body>
+
+<div class="app">
+  <div class="slider">
+    <input type="radio"
+           name="point"
+           class="radio"
+           id="slide1"
+           checked>
+    <input type="radio"
+           name="point"
+           class="radio"
+           id="slide2">
+    <input type="radio"
+           name="point"
+           class="radio"
+           id="slide3">
+    <input type="radio"
+           name="point"
+           class="radio"
+           id="slide4">
+
+    <div class="slider__slides">
+      <div class="slider__slide slider__slide--1">
+        <img src="./assets/images/slide-4.jpg"
+             alt="">
+      </div>
+      <div class="slider__slide slider__slide--2">
+        <img src="./assets/images/slide-2.jpg"
+             alt="">
+
+      </div>
+      <div class="slider__slide slider__slide--3">
+        <img src="./assets/images/slide-3.jpg"
+             alt="">
+      </div>
+      <div class="slider__slide slider__slide--4">
+        <img src="./assets/images/slide-1.jpg"
+             alt="">
+      </div>
+    </div>
+
+    <div class="slider__texts">
+      <p class="slider__text slider__text--1">Ну давай же, пойдем!<br> Это приключение на 20 минут!</p>
+      <p class="slider__text slider__text--2">Конкурс программистов</p>
+      <p class="slider__text slider__text--3">Парень, сломавший мой код</p>
+      <p class="slider__text slider__text--4">Вам достался очень простой проект!</p>
+    </div>
+
+    <div class="slider__controls">
+      <label for="slide1"
+             class="slider__control slider__control--1"></label>
+      <label for="slide2"
+             class="slider__control slider__control--2"></label>
+      <label for="slide3"
+             class="slider__control slider__control--3"></label>
+      <label for="slide4"
+             class="slider__control slider__control--4"></label>
+    </div>
+  </div>
+</div>
+
+
+</div>
+</body>
+</html>
